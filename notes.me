@@ -1,0 +1,33 @@
+### Component lifecycle notes  ### 
+
+This is broadly divided into three parts: creation, updating, and deletion.
+
+ a ChatWindow component is created. As you are interacting with it and sending messages to your friends
+ - that's the updating part. And when you finally close the window, the React component gets deleted.
+
+there are two lifecycle hooks available to us: static getDerivedStateFromProps, and componentDidMount
+
+
+
+## lab deliverables notes ##
+
+ ## D-1
+
+in App, write a componentDidMount method that invokes the existing handleAddTimer class method.
+
+Note: When writing lifecycle methods, avoid using arrow functions 
+- while they may work in browser, we want these methods to exist on 
+the prototype chain of whatever JavaScript class we've created.
+
+
+Lifecycle methods written using arrow functions will not exist on the prototype chain 
+and will not pass the tests in this lab.
+
+
+The `componentDidMount` method is often a good place to include
+[setInterval][setinterval] or setTimeout functions, allowing you to delay
+something from happening on a component or cause some repeating change. Perfect
+for our timer app.
+
+## D-2 
+
